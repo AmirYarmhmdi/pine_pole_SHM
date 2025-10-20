@@ -1,4 +1,4 @@
-#Structural Health Monitoring for Wooden Poles
+# Structural Health Monitoring for Wooden Poles
 
 ## Overview
 
@@ -138,4 +138,5 @@ print(f"Estimated natural frequency: {f_nat:.2f} Hz")
 ```
 
 This approach enables **non-destructive evaluation** of wooden poles and can be integrated into **IoT-based monitoring systems**.
+
 
