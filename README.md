@@ -29,22 +29,23 @@ def natural_frequency(L_free):
 
 The calculation is based on **Euler–Bernoulli beam theory** for a cantilever:
 
-[
-omega_n = \beta_1^2 \sqrt{\frac{EI}{m L^4}}]
+```
+omega_n = beta_1**2 * sqrt(E*I / (m * L**4))
+```
 
 Where:
 
-* (E) = Young’s modulus of wood (Pa)
-* (I) = Moment of inertia of the cross-section ([m^4])
+* `E` = Young’s modulus of wood (Pa)
+* `I` = Moment of inertia of the cross-section [m^4]
 
-  * For circular cross-section: (I = \frac{\pi d^4}{64})
-* (m) = Mass per unit length ([kg/m])
+  * For circular cross-section: `I = pi*d^4/64`
+* `m` = Mass per unit length [kg/m]
 
-  * For circular cross-section: (m = \rho \frac{\pi d^2}{4})
-* (L) = Free length above ground [m]
-* (eta_1 = 1.875) (first-mode coefficient for a cantilever)
-* (\omega_n) = Angular frequency [rad/s]
-* (f_n = \omega_n / (2\pi)) = Frequency [Hz]
+  * For circular cross-section: `m = rho * pi * d^2 / 4`
+* `L` = Free length above ground [m]
+* `beta_1 = 1.875` (first-mode coefficient for a cantilever)
+* `omega_n` = Angular frequency [rad/s]
+* `f_n = omega_n / (2*pi)` = Frequency [Hz]
 
 **Notes:**
 
@@ -72,15 +73,21 @@ def extract_natural_frequency(ax, ay, az, fs, plot=True):
 
 1. Compute the **magnitude of 3-axis acceleration**:
 
-[a_\text{mag}(t) = \sqrt{a_x^2 + a_y^2 + a_z^2}]
+```
+a_mag(t) = sqrt(ax^2 + ay^2 + az^2)
+```
 
 2. Remove DC offset to eliminate sensor bias:
 
-[a_\text{mag}(t) \gets a_\text{mag}(t) - \text{mean}(a_\text{mag})]
+```
+a_mag(t) = a_mag(t) - mean(a_mag)
+```
 
 3. Compute **FFT** to obtain frequency spectrum:
 
-[A(f) = \text{FFT}(a_\text{mag}(t))]
+```
+A(f) = FFT(a_mag(t))
+```
 
 4. Identify the **dominant peak** (excluding 0 Hz) as the **natural frequency**.
 
