@@ -1,9 +1,3 @@
-<img width="589" height="568" alt="Screenshot 2025-10-20 at 11 20 05" src="https://github.com/user-attachments/assets/b3a3c1d7-41e4-4d59-8266-a57f7c7c5244" />
-
-
----
-
-````markdown
 # WoodSense: Frequency-Based Structural Health Monitoring for Wooden Poles
 
 ## Overview
@@ -24,7 +18,7 @@ The goal is to use frequency shifts as an indicator of structural health, helpin
 ```python
 def natural_frequency(L_free):
     ...
-````
+```
 
 ### Parameters
 
@@ -36,8 +30,7 @@ def natural_frequency(L_free):
 The calculation is based on **Euler–Bernoulli beam theory** for a cantilever:
 
 [
-\omega_n = \beta_1^2 \sqrt{\frac{EI}{m L^4}}
-]
+omega_n = \beta_1^2 \sqrt{\frac{EI}{m L^4}}]
 
 Where:
 
@@ -49,7 +42,7 @@ Where:
 
   * For circular cross-section: (m = \rho \frac{\pi d^2}{4})
 * (L) = Free length above ground [m]
-* (\beta_1 = 1.875) (first-mode coefficient for a cantilever)
+* (eta_1 = 1.875) (first-mode coefficient for a cantilever)
 * (\omega_n) = Angular frequency [rad/s]
 * (f_n = \omega_n / (2\pi)) = Frequency [Hz]
 
@@ -79,21 +72,15 @@ def extract_natural_frequency(ax, ay, az, fs, plot=True):
 
 1. Compute the **magnitude of 3-axis acceleration**:
 
-[
-a_\text{mag}(t) = \sqrt{a_x^2 + a_y^2 + a_z^2}
-]
+[a_\text{mag}(t) = \sqrt{a_x^2 + a_y^2 + a_z^2}]
 
 2. Remove DC offset to eliminate sensor bias:
 
-[
-a_\text{mag}(t) \gets a_\text{mag}(t) - \text{mean}(a_\text{mag})
-]
+[a_\text{mag}(t) \gets a_\text{mag}(t) - \text{mean}(a_\text{mag})]
 
 3. Compute **FFT** to obtain frequency spectrum:
 
-[
-A(f) = \text{FFT}(a_\text{mag}(t))
-]
+[A(f) = \text{FFT}(a_\text{mag}(t))]
 
 4. Identify the **dominant peak** (excluding 0 Hz) as the **natural frequency**.
 
@@ -144,6 +131,3 @@ print(f"Estimated natural frequency: {f_nat:.2f} Hz")
 ```
 
 This approach enables **non-destructive evaluation** of wooden poles and can be integrated into **IoT-based monitoring systems**.
-
-```
-
