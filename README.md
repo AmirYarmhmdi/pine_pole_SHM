@@ -10,6 +10,9 @@ This project implements two main approaches to estimate the **natural frequency*
 The goal is to use frequency shifts as an indicator of structural health, helping detect decay or damage without destructive testing.
 
 ---
+<img width="589" height="568" alt="Screenshot 2025-10-20 at 11 20 05" src="https://github.com/user-attachments/assets/2ed15e12-f59a-49f3-8b5c-1e21425a90c3" />
+
+---
 
 ## 1️⃣ Analytical Natural Frequency Estimation
 
@@ -138,5 +141,6 @@ print(f"Estimated natural frequency: {f_nat:.2f} Hz")
 ```
 
 This approach enables **non-destructive evaluation** of wooden poles and can be integrated into **IoT-based monitoring systems**.
+
 
 
