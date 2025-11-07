@@ -1,0 +1,188 @@
+[
+    {
+        "timestamp": "2025-11-07 12:05:10",
+        "sensor_data_file": "data/sensor_data.csv",
+        "plot_file": "outputs/plots/fft_spectrum.png",
+        "C_ground_m": 0.56,
+        "L_free_m": 1.55,
+        "f_measured_Hz": 28.571,
+        "f_theoretical_Hz": 31.015,
+        "difference_percent": -7.88
+    },
+    {
+        "timestamp": "2025-11-07 12:07:51",
+        "sensor_data_file": "data/sensor_data.csv",
+        "plot_file": "outputs/plots/fft_spectrum.png",
+        "input_type": "circumference",
+        "C_ground_m": 0.56,
+        "L_free_m": 1.55,
+        "f_measured_Hz": 28.571,
+        "f_theoretical_Hz": 31.015,
+        "difference_percent": -7.88
+    },
+    {
+        "timestamp": "2025-11-07 12:08:17",
+        "sensor_data_file": "data/sensor_data.csv",
+        "plot_file": "outputs/plots/fft_spectrum.png",
+        "input_type": "height",
+        "C_ground_m": null,
+        "L_free_m": 6.5,
+        "f_measured_Hz": 28.571,
+        "f_theoretical_Hz": 2.18,
+        "difference_percent": 1210.53
+    },
+    {
+        "timestamp": "2025-11-07 12:15:40",
+        "sensor_data_file": "data/sensor_data.csv",
+        "plot_file": "outputs/plots/fft_spectrum.png",
+        "input_type": "circumference",
+        "C_ground_m": 0.5,
+        "L_free_m": 0.0,
+        "f_measured_Hz": 28.571,
+        "f_theoretical_Hz": NaN,
+        "difference_percent": NaN
+    },
+    {
+        "timestamp": "2025-11-07 12:20:59",
+        "sensor_data_file": "data/sensor_data.csv",
+        "plot_file": "outputs/plots/fft_spectrum.png",
+        "input_type": "circumference",
+        "C_ground_m": 0.55,
+        "L_free_m": 0.95,
+        "f_measured_Hz": 28.571,
+        "f_theoretical_Hz": 94.417,
+        "difference_percent": -69.74
+    },
+    {
+        "timestamp": "2025-11-07 12:21:39",
+        "sensor_data_file": "data/sensor_data.csv",
+        "plot_file": "outputs/plots/fft_spectrum.png",
+        "input_type": "height",
+        "C_ground_m": null,
+        "L_free_m": 6.5,
+        "f_measured_Hz": 28.571,
+        "f_theoretical_Hz": 2.18,
+        "difference_percent": 1210.53
+    },
+    {
+        "timestamp": "2025-11-07 12:27:37",
+        "sensor_data_file": "data/sensor_data.csv",
+        "plot_file": "outputs/plots/fft_spectrum.png",
+        "input_type": "height",
+        "C_ground_m": null,
+        "L_free_m": 6.5,
+        "f_measured_Hz": 4.367,
+        "f_theoretical_Hz": 2.18,
+        "difference_percent": 100.29
+    },
+    {
+        "timestamp": "2025-11-07 12:32:01",
+        "sensor_data_file": "data/sensor_data.csv",
+        "plot_file": "outputs/plots/fft_spectrum.png",
+        "input_type": "height",
+        "C_ground_m": null,
+        "L_free_m": 6.5,
+        "f_measured_Hz": 4.367,
+        "f_theoretical_Hz": 2.18,
+        "difference_percent": 100.29
+    },
+    {
+        "timestamp": "2025-11-07 12:33:36",
+        "sensor_data_file": "data/sensor_data.csv",
+        "plot_file": "outputs/plots/fft_spectrum.png",
+        "input_type": "height",
+        "C_ground_m": null,
+        "L_free_m": 6.0,
+        "f_measured_Hz": 2.183,
+        "f_theoretical_Hz": 2.506,
+        "difference_percent": -12.86
+    },
+    {
+        "timestamp": "2025-11-07 12:33:48",
+        "sensor_data_file": "data/sensor_data.csv",
+        "plot_file": "outputs/plots/fft_spectrum.png",
+        "input_type": "height",
+        "C_ground_m": null,
+        "L_free_m": 6.5,
+        "f_measured_Hz": 2.183,
+        "f_theoretical_Hz": 2.18,
+        "difference_percent": 0.15
+    },
+    {
+        "timestamp": "2025-11-07 12:42:08",
+        "sensor_data_file": "data/sensor_data.csv",
+        "plot_file": "outputs/plots/fft_spectrum.png",
+        "input_type": "height",
+        "C_ground_m": null,
+        "L_free_m": 6.5,
+        "fs_Hz": 200.0,
+        "f_theoretical_Hz": 2.18,
+        "f_measured_Hz": 2.183,
+        "difference_percent": 0.15,
+        "modes": {
+            "f1_Hz": 2.183,
+            "f2_Hz": 2.167,
+            "f3_Hz": 2.2
+        }
+    },
+    {
+        "timestamp": "2025-11-07 13:18:37",
+        "sensor_data_file": "data/sensor_data.csv",
+        "plot_file": "outputs/plots/fft_spectrum.png",
+        "input_type": "height",
+        "C_ground_m": null,
+        "L_free_m": 6.5,
+        "fs_Hz": 200.0,
+        "f_theoretical_Hz": 2.18,
+        "f_measured_Hz": 2.183,
+        "difference_percent": 0.15,
+        "damage_level": "Minor",
+        "condition": "Minor deviation \u2014 likely surface or environmental variation.",
+        "recommended_action": "No immediate action; continue periodic monitoring.",
+        "modes": {
+            "f1_Hz": 2.183,
+            "f2_Hz": 2.167,
+            "f3_Hz": 2.2
+        }
+    },
+    {
+        "timestamp": "2025-11-07 13:22:33",
+        "sensor_data_file": "data/sensor_data.csv",
+        "plot_file": "outputs/plots/fft_spectrum.png",
+        "input_type": "height",
+        "C_ground_m": null,
+        "L_free_m": 6.5,
+        "fs_Hz": 200.0,
+        "f_theoretical_Hz": 2.21,
+        "f_measured_Hz": 2.183,
+        "difference_percent": -1.21,
+        "damage_level": "Minor",
+        "condition": "Minor deviation \u2014 likely surface or environmental variation.",
+        "recommended_action": "No immediate action; continue periodic monitoring.",
+        "modes": {
+            "f1_Hz": 2.183,
+            "f2_Hz": 2.167,
+            "f3_Hz": 2.2
+        }
+    },
+    {
+        "timestamp": "2025-11-07 13:23:44",
+        "sensor_data_file": "data/sensor_data.csv",
+        "plot_file": "outputs/plots/fft_spectrum.png",
+        "input_type": "height",
+        "C_ground_m": null,
+        "L_free_m": 6.5,
+        "fs_Hz": 200.0,
+        "f_theoretical_Hz": 2.21,
+        "f_measured_Hz": 2.183,
+        "difference_percent": 1.21,
+        "damage_level": "Minor",
+        "condition": "Minor deviation \u2014 likely surface or environmental variation.",
+        "recommended_action": "No immediate action; continue periodic monitoring.",
+        "modes": {
+            "f1_Hz": 2.183,
+            "f2_Hz": 2.167,
+            "f3_Hz": 2.2
+        }
+    }
+]

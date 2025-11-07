@@ -1,0 +1,16 @@
+# === Core scientific stack ===
+numpy>=1.24.0
+pandas>=2.0.0
+matplotlib>=3.7.0
+
+# === System utilities ===
+python-dotenv>=1.0.0
+
+# === Document generation (optional) ===
+python-docx>=1.0.0
+
+# === Web/API communication (for fetch_sensor_data) ===
+requests>=2.31.0
+
+# === Development / optional testing ===
+pytest>=7.4.0
