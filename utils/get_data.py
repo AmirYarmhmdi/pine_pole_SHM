@@ -1,5 +1,7 @@
+# ============================================================
 # utils/get_data.py
-# ===========================
+# Fetch and store sensor data from configurable API endpoint
+# ============================================================
 
 import os
 from datetime import datetime
@@ -7,25 +9,34 @@ from datetime import datetime
 import pandas as pd
 import requests
 
-DATA_FILE = os.path.join("data", "sensor_data.csv")
+from utils.config_loader import load_config
+
+# Load configuration
+CONFIG = load_config()
+DATA_CFG = CONFIG.get("data_source", {})
+DATA_FILE = DATA_CFG.get("save_path", os.path.join("data", "sensor_data.csv"))
+API_URL_DEFAULT = DATA_CFG.get("api_url", "http://localhost:8000/sensor/")
 
 
-def fetch_sensor_data(url="http://localhost:8000/sensor/"):
+def fetch_sensor_data(url=None):
     """
-    Fetch new sensor data from a given URL and append it to sensor_data.csv.
+    Fetch new sensor data from the configured or provided API endpoint
+    and append it to the CSV file defined in config.json.
 
-    The endpoint is expected to return a JSON list like:
+    The endpoint is expected to return JSON like:
     [
         {"timestamp": 1730988000.0, "ax": 0.01, "ay": -0.02, "az": 9.81},
         ...
     ]
     """
-    print(f"\n🌐 Requesting data from: {url}")
+    api_url = url or API_URL_DEFAULT
+    print(f"\n🌐 Requesting sensor data from: {api_url}")
+
     try:
-        response = requests.get(url, timeout=5)
+        response = requests.get(api_url, timeout=8)
         response.raise_for_status()
     except requests.RequestException as e:
-        print(f"❌ Failed to reach {url}\nError: {e}")
+        print(f"❌ Failed to reach {api_url}\nError: {e}")
         return False
 
     try:
@@ -41,22 +52,28 @@ def fetch_sensor_data(url="http://localhost:8000/sensor/"):
     # Convert JSON to DataFrame
     df_new = pd.DataFrame(data)
 
-    # Convert timestamp if it's not numeric (ISO string)
+    # Normalize timestamps
     if "timestamp" in df_new.columns:
-        try:
-            df_new["timestamp"] = (
-                pd.to_datetime(df_new["timestamp"]).astype(float) / 1e9
-            )
-        except Exception:
-            pass  # assume it's already numeric
+        if not pd.api.types.is_numeric_dtype(df_new["timestamp"]):
+            try:
+                df_new["timestamp"] = (
+                    pd.to_datetime(df_new["timestamp"]).astype(float) / 1e9
+                )
+            except Exception:
+                print("⚠️ Could not convert timestamps — leaving as-is.")
 
     # Save or append
-    os.makedirs("data", exist_ok=True)
-    if os.path.exists(DATA_FILE):
-        df_new.to_csv(DATA_FILE, mode="a", header=False, index=False)
-        print(f"✅ {len(df_new)} new rows appended to {DATA_FILE}")
-    else:
-        df_new.to_csv(DATA_FILE, index=False)
-        print(f"✅ New file created: {DATA_FILE} ({len(df_new)} rows)")
+    os.makedirs(os.path.dirname(DATA_FILE), exist_ok=True)
+    write_mode = "a" if os.path.exists(DATA_FILE) else "w"
+    header = not os.path.exists(DATA_FILE)
+    df_new.to_csv(DATA_FILE, mode=write_mode, header=header, index=False)
+    print(
+        f"✅ {len(df_new)} rows {'appended to' if not header else 'saved in'} {DATA_FILE}"
+    )
 
     return True
+
+
+# Optional standalone test
+if __name__ == "__main__":
+    fetch_sensor_data()

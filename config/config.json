@@ -5,7 +5,7 @@
         "density": 450,
         "compressive_strength_MPa": 40,
         "model": "Euler-Bernoulli Cantilever Beam (Fixed at Ground)",
-        "assumptions": "Average properties of European-grown Scots Pine; moderate moisture content (~12–15%); uniform cross-section and small vibration amplitude",
+        "assumptions": "Average properties of European-grown Scots Pine; moderate moisture content (~12-15%); uniform cross-section and small vibration amplitude",
         "reference": "Mederski et al. (2021) - Density and Mechanical Properties of Scots Pine (Pinus sylvestris L.), Drewno Journal"
     },
     "cable": {
@@ -18,5 +18,9 @@
         "minor_max": 5.0,
         "moderate_max": 15.0,
         "severe_min": 20.0
+    },
+    "data_source": {
+    "api_url": "http://localhost:8000/sensor/",
+    "save_path": "data/sensor_data.csv"
     }
 }

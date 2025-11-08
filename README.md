@@ -8,6 +8,45 @@ This project implements two main approaches to estimate the **natural frequency*
 2. **Experimental estimation** from real 3-axis accelerometer data using FFT (Fast Fourier Transform).
 
 The goal is to use frequency shifts as an indicator of structural health, helping detect decay or damage without destructive testing.
+## 📁 Folder Structure
+
+```
+POLE/
+│
+├── config/
+│   └── config.json          # Material, cable, and threshold parameters
+│
+├── data/
+│   └── sensor_data.csv      # Input accelerometer data
+│
+├── outputs/
+│   ├── plots/               # Generated FFT figures
+│   │   └── fft_spectrum.png
+│   └── results.json         # All analysis results saved here
+│
+├── ref. papers/             # Reference papers used in research
+│
+├── utils/
+│   ├── pole_est.py          # Analytical frequency estimator
+│   ├── pole_det.py          # FFT and vibration analysis
+│   └── get_data.py          # Optional sensor data API fetcher
+│
+├── main.py                  # Main execution script (project controller)
+├── requirements.txt         # Dependency list
+└── README.md                # Project documentation
+```
+
+---
+
+## ⚙️ 1️⃣ Installation & Setup
+
+### Step 1 — Clone or copy the project
+```bash
+git clone https://github.com/<your_username>/WoodSense.git
+cd POLE
+```
+
+
 
 ---
 
