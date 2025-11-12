@@ -182,5 +182,46 @@
             "condition_summary": "Moderate stiffness loss \u2014 possible internal decay or local cracking.",
             "recommended_action": "Inspect the pole or support; plan preventive maintenance."
         }
+    },
+    {
+        "timestamp": "2025-11-08 08:53:49",
+        "metadata": {
+            "sensor_data_file": "data/sensor_data.csv",
+            "plot_file": "outputs/plots/fft_spectrum.png",
+            "input_type": "height",
+            "C_ground_m": null,
+            "L_free_m": 6.5,
+            "has_support": false,
+            "support_height_m": null,
+            "fs_Hz": 200.0,
+            "fft_peaks_Hz": [
+                2.183,
+                2.167,
+                2.2
+            ]
+        },
+        "theoretical": {
+            "free": {
+                "frequency_Hz": 2.044
+            },
+            "supported": {
+                "frequency_Hz": null
+            }
+        },
+        "fft_analysis": {
+            "matched_free": {
+                "frequency_Hz": 2.167,
+                "difference_percent": 6.0
+            },
+            "matched_support": {
+                "frequency_Hz": null,
+                "difference_percent": null
+            }
+        },
+        "diagnosis": {
+            "damage_level": "Moderate",
+            "condition_summary": "Moderate stiffness loss \u2014 possible internal decay or local cracking.",
+            "recommended_action": "Inspect the pole or support; plan preventive maintenance."
+        }
     }
 ]
