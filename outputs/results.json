@@ -223,5 +223,128 @@
             "condition_summary": "Moderate stiffness loss \u2014 possible internal decay or local cracking.",
             "recommended_action": "Inspect the pole or support; plan preventive maintenance."
         }
+    },
+    {
+        "timestamp": "2025-11-20 10:12:41",
+        "metadata": {
+            "sensor_data_file": "data/sensor_data.csv",
+            "plot_file": "outputs/plots/fft_spectrum.png",
+            "input_type": "circumference",
+            "C_ground_m": 0.66,
+            "L_free_m": 7.5,
+            "has_support": false,
+            "support_height_m": null,
+            "fs_Hz": 200.0,
+            "fft_peaks_Hz": [
+                2.183,
+                2.167,
+                2.2
+            ]
+        },
+        "theoretical": {
+            "free": {
+                "frequency_Hz": 1.619
+            },
+            "supported": {
+                "frequency_Hz": null
+            }
+        },
+        "fft_analysis": {
+            "matched_free": {
+                "frequency_Hz": 2.167,
+                "difference_percent": 33.81
+            },
+            "matched_support": {
+                "frequency_Hz": null,
+                "difference_percent": null
+            }
+        },
+        "diagnosis": {
+            "damage_level": "Severe",
+            "condition_summary": "Severe stiffness loss \u2014 structural degradation likely.",
+            "recommended_action": "Immediate inspection and possible replacement required."
+        }
+    },
+    {
+        "timestamp": "2025-11-20 10:13:30",
+        "metadata": {
+            "sensor_data_file": "data/sensor_data.csv",
+            "plot_file": "outputs/plots/fft_spectrum.png",
+            "input_type": "height",
+            "C_ground_m": null,
+            "L_free_m": 7.5,
+            "has_support": false,
+            "support_height_m": null,
+            "fs_Hz": 200.0,
+            "fft_peaks_Hz": [
+                2.183,
+                2.167,
+                2.2
+            ]
+        },
+        "theoretical": {
+            "free": {
+                "frequency_Hz": 1.62
+            },
+            "supported": {
+                "frequency_Hz": null
+            }
+        },
+        "fft_analysis": {
+            "matched_free": {
+                "frequency_Hz": 2.167,
+                "difference_percent": 33.72
+            },
+            "matched_support": {
+                "frequency_Hz": null,
+                "difference_percent": null
+            }
+        },
+        "diagnosis": {
+            "damage_level": "Severe",
+            "condition_summary": "Severe stiffness loss \u2014 structural degradation likely.",
+            "recommended_action": "Immediate inspection and possible replacement required."
+        }
+    },
+    {
+        "timestamp": "2025-11-20 10:13:52",
+        "metadata": {
+            "sensor_data_file": "data/sensor_data.csv",
+            "plot_file": "outputs/plots/fft_spectrum.png",
+            "input_type": "height",
+            "C_ground_m": null,
+            "L_free_m": 7.5,
+            "has_support": true,
+            "support_height_m": 4.0,
+            "fs_Hz": 200.0,
+            "fft_peaks_Hz": [
+                2.183,
+                2.167,
+                2.2
+            ]
+        },
+        "theoretical": {
+            "free": {
+                "frequency_Hz": 1.62
+            },
+            "supported": {
+                "frequency_Hz": 1.88
+            }
+        },
+        "fft_analysis": {
+            "matched_free": {
+                "frequency_Hz": 2.167,
+                "difference_percent": 33.72
+            },
+            "matched_support": {
+                "frequency_Hz": 2.167,
+                "difference_percent": 15.27
+            }
+        },
+        "diagnosis": {
+            "damage_level": "Unclassified",
+            "condition_summary": "Frequency deviation outside standard thresholds.",
+            "recommended_action": "Review boundary conditions or sensor calibration."
+        }
     }
 ]

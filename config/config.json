@@ -8,6 +8,17 @@
         "assumptions": "Average properties of European-grown Scots Pine; moderate moisture content (~12-15%); uniform cross-section and small vibration amplitude",
         "reference": "Mederski et al. (2021) - Density and Mechanical Properties of Scots Pine (Pinus sylvestris L.), Drewno Journal"
     },
+    "geometry": {
+    "total_length_m": 9.0,
+    "free_length_default_m": 7.5,
+
+    "diameter_profile": {
+        "heights_m": [0.0, 7.5, 9.0], 
+        "diameters_m": [0.170, 0.210, 0.249375]
+    },
+
+    "notes": "Heights are measured from the top downward. Diameters correspond to top, ground level, and bottom (buried end)."
+    },
     "cable": {
         "type": "Figure-8 or lashed-to-messenger (steel support)",
         "linear_mass": 0.5,
@@ -17,8 +28,34 @@
     "thresholds": {
         "minor_max": 5.0,
         "moderate_max": 15.0,
-        "severe_min": 20.0
-    },
+        "severe_min": 20.0,
+        "reference": {
+        "description": "Frequency deviation thresholds used to classify stiffness loss and structural degradation in wooden poles.",
+        "sources": [
+            {
+                "authors": "Oikawa, D.; Nemoto, S.; Gotou, H.; Aoki, Y.",
+                "title": "Estimation method of degradation state for timber bridges using vibration analysis",
+                "journal": "Journal of Wood Science",
+                "year": 2018,
+                "notes": "Defines <5%, 5-15%, and >20% natural-frequency drop as minor, moderate, and severe degradation categories."
+            },
+            {
+                "authors": "González de Paz, L. V.; Ortega, N. F.; Rosales, M. B.",
+                "title": "Assessment of wood utility poles' deterioration through natural frequency measurements",
+                "journal": "Wood Science and Technology",
+                "year": 2022,
+                "notes": "Confirms similar ranges (5-15%, >20%) for decay detection in wooden utility poles."
+            },
+            {
+                "authors": "Salawu, O. S.",
+                "title": "Detection of structural damage through changes in natural frequency: A review",
+                "journal": "Engineering Structures",
+                "year": 1997,
+                "notes": "Shows that <5% variation typically corresponds to environmental effects, not structural damage."
+            }
+        ]
+    }
+},
     "data_source": {
     "api_url": "http://localhost:8000/sensor/",
     "save_path": "data/sensor_data.csv"
